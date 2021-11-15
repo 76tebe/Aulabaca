@@ -77,7 +77,7 @@ a {
     margin-bottom: 24px;
 }
 
-.sidebar-menu a.home {
+.sidebar-menu a.explore {
     background-color: var(--background-component);
 }
 
@@ -87,8 +87,9 @@ a {
 
 .navbar {
     width: calc(100% - 257px - 64px);
-    position: absolute;
+    position: fixed;
     left: 257px;
+    z-index: 100;
     display: flex;
     justify-content: space-between;
     padding: 16px 32px;
@@ -99,6 +100,8 @@ a {
 .navbar .searchbar {
     display: flex;
     align-items: center;
+    flex-grow: 1;
+    margin-right: 24px;
 }
 
 .searchbar span.material-icons {
@@ -109,7 +112,7 @@ a {
 }
 
 .navbar .searchbar input {
-    width: 440px;
+    flex: 0 1 440px;
     padding: 8px 16px 8px 37px;
     font-family: 'Work Sans', sans-serif;
     font-size: 0.875rem;
@@ -207,17 +210,19 @@ a .card:hover {
 }
 
 .cards-category{
-    display: flex;
-    flex-wrap: wrap;
-    gap: 24px;
+    display: grid;
+    grid-template-rows: 1fr;
+    grid-template-columns: repeat(auto-fill,minmax(180px,1fr));
+    grid-gap: 24px;
 }
 
 .cards-category .card-category {
     display: flex;
     justify-content: center;
     align-items: center;
-    min-width: 208px;
-    min-height: 134px;
+    /* max-width: 208px;
+    min-height: 134px; */
+    padding: 54px 0;
     border-radius: 6px;
     background-color: var(--background-component-2);
 }

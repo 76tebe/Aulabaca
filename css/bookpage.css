@@ -1,0 +1,242 @@
+html {
+    font-family: 'Work Sans', sans-serif;
+}
+
+body {
+    background-image: var(--content-background-gradient);
+    height: 100%;
+    margin: 0;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+.sidebar {
+    position: fixed;
+    width: 241px;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    background-color: var(--background);
+    padding: 0 8px;
+}
+
+.sidebar .container {
+    width: 100%;
+}
+
+.sidebar .logo-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.sidebar .logo {
+    height: 40px;
+    margin: 32px 0 40px;
+}
+
+.sidebar a.btn {
+    padding: 8px 16px;
+    font-size: 0.875rem;
+    font-weight: 500;
+    margin-bottom: 4px;
+}
+
+.btn {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    border-radius: 6px;
+}
+
+a {
+    text-decoration: none;
+    color: var(--primary-white);
+    transition: 0.2s;
+}
+
+.sidebar .upload {
+    background-color: var(--primary-white);
+}
+
+.sidebar a.upload {
+    font-weight: 600;
+    color: var(--background);
+}
+
+.upload-container .info p {
+    margin-top: 4px;
+    font-size: 0.75rem;
+    line-height: 150%;
+    letter-spacing: 0.0025em;
+    color: var(--primary-white);
+    opacity: .76;
+}
+
+.upload-container {
+    margin-bottom: 24px;
+}
+
+.sidebar-menu a.explore {
+    background-color: var(--background-component);
+}
+
+.sidebar-menu a:hover {
+    background-color: var(--background-component);
+}
+
+.navbar {
+    width: calc(100% - 257px - 64px);
+    position: fixed;
+    left: 257px;
+    z-index: 100;
+    display: flex;
+    justify-content: space-between;
+    padding: 16px 32px;
+    background: var(--background);
+    box-shadow: 0px 2px 16px rgba(64, 75, 105, 0.16);
+}
+
+.navbar .searchbar {
+    display: flex;
+    align-items: center;
+    flex-grow: 1;
+    margin-right: 24px;
+}
+
+.searchbar span.material-icons {
+    font-size: 21px;
+    position: absolute;
+    padding: 8px;
+    color: var(--background);
+}
+
+.navbar .searchbar input {
+    flex: 0 1 440px;
+    padding: 8px 16px 8px 37px;
+    font-family: 'Work Sans', sans-serif;
+    font-size: 0.875rem;
+    line-height: 150%;
+    letter-spacing: 0.0025em;
+    border: none;
+    border-radius: 100px;
+}
+
+.navbar .profile {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
+
+.navbar .profile p {
+    font-family: 'Work Sans', sans-serif;
+    font-size: 1rem;
+    line-height: 150%;
+    letter-spacing: 0.005em;
+    font-weight: 600;
+    color: var(--primary-white);
+}
+
+main {
+    width: calc(100% - 257px - 64px);
+    position: absolute;
+    left: 257px;
+    top: 69px;
+    padding: 32px;
+}
+
+section {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 48px;
+    color: var(--primary-white);
+}
+
+section h1 {
+    margin-bottom: 32px;
+    font-size: 1.5rem;
+    line-height: 118%;
+    letter-spacing: 0.0025em;
+    font-weight: 600;
+}
+
+section.about-book {
+    flex-direction: row;
+}
+
+section.about-book h1 {
+    font-size: 3rem;
+    line-height: 118%;
+    letter-spacing: 0.0025em;
+    font-weight: 600;
+}
+
+.book-cover img {
+    width: 208px;
+    border-radius: 6px;
+}
+
+.book-info {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 16px 24px;
+}
+
+.book-info .txt-info p {
+    margin-top: 8px;
+    font-size: 1rem;
+    line-height: 150%;
+    letter-spacing: 0.005em;
+    color: var(--subtext);
+}
+
+.book-info .txt-info a {
+    font-weight: 500;
+}
+
+.book-info .txt-info a:hover {
+    text-decoration: underline;
+}
+
+section.about-book .btn, section.about-book .btn a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+section.about-book .btn a {
+    padding: 12px 24px;
+    border-radius: 100px;
+    font-size: 0.875rem;
+    line-height: 150%;
+    letter-spacing: 1.25px;
+    font-weight: 600;
+}
+
+section.about-book .btn .read-now {
+    background-color: var(--component);
+}
+
+section.about-book .btn a.read-now:hover {
+    background-color: var(--hover-component);
+}
+
+section.about-book .btn .add-library {
+    color: #D44467;
+}
+
+
+section.about-book .btn a.add-library:hover {
+    background-color: rgba(255, 255, 255, 0.08);
+}
+
+section.about-book .btn .add-library span {
+    margin-right: 8px;
+}
+
+section .txt-content p {
+    font-size: 1rem;
+    line-height: 150%;
+    letter-spacing: 0.005em;
+}

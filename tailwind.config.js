@@ -2,7 +2,18 @@ module.exports = {
   purge: [],
   darkMode: false, // or 'media' or 'class'
   theme: {
-    extend: {},
+    extend: {
+      colors: {
+        'background': '#283149',
+        'content-background-gradient': 'linear-gradient(#283149, #232A3F)',
+        'background-component' : '#404B69',
+        'background-component-2' : '#333C55',
+        'primary-white' : '#fff',
+        'subtext' : '#9AADB4',
+        'component': '#009CA7',
+        'hover-component' : '#2EADB6',
+      }
+    },
   },
   variants: {
     extend: {},

@@ -1,3 +1,8 @@
+@import "reset.css";
+@import "fonts.css";
+@import "colors.css";
+@import "scrollbar.css";
+
 html {
     font-family: 'Work Sans', sans-serif;
 }
@@ -86,9 +91,9 @@ a {
 }
 
 .navbar {
-    width: calc(100% - 257px - 64px);
+    width: calc(100% - 241px);
     position: fixed;
-    left: 257px;
+    left: 241px;
     z-index: 100;
     display: flex;
     justify-content: space-between;
@@ -137,19 +142,15 @@ a {
     color: var(--primary-white);
 }
 
-main {
-    width: calc(100% - 257px - 64px);
-    position: absolute;
-    left: 257px;
-    top: 69px;
-    padding: 32px;
-}
 
 section {
     display: flex;
     flex-direction: column;
     margin-bottom: 48px;
     color: var(--primary-white);
+    /* padding: 24px;
+    border-radius: 12px; */
+    background-color: var(--background-component-2);
 }
 
 section h1 {

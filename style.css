@@ -27,7 +27,7 @@ body {
     flex-direction: column;
     background-color: var(--background);
     padding: 0 8px;
-    z-index: 100;
+    z-index: 1000;
 }
 
 .sidebar .container {
@@ -95,7 +95,7 @@ a {
     width: calc(100% - 241px);
     position: fixed;
     left: 241px;
-    z-index: 10;
+    z-index: 100;
     display: flex;
     justify-content: space-between;
     padding: 16px 32px;

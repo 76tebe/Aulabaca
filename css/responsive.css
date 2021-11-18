@@ -1,0 +1,27 @@
+@media only screen and (max-width: 1023px) {
+    .navbar {
+        width: 100%;
+        padding: 16px;
+        left: 0;
+    }
+
+    .navbar .profile {
+        display: none;
+    }
+
+    .sidebar {
+        display: none;
+    }
+
+    main {
+        width: 100%;
+        padding: 16px;
+        left: 0;
+    }
+}
+
+@media only screen and (max-width: 640px) {
+    .recent-container .table-author, .recent-container .table-category, .recent-container .table-release-date, .recent-container .fav, .recent-container .more {
+        display: none;
+    }
+}

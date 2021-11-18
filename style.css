@@ -2,6 +2,10 @@
 @tailwind components;
 @tailwind utilities;
 
+@import "./css/fonts.css";
+@import "./css/colors.css";
+@import "./css/scrollbar.css";
+
 html {
     font-family: 'Work Sans', sans-serif;
 }
@@ -14,6 +18,7 @@ body {
     background-attachment: fixed;
 }
 
+/* navigation */
 .sidebar {
     position: fixed;
     width: 241px;
@@ -82,10 +87,6 @@ a {
     margin-bottom: 24px;
 }
 
-/* .sidebar-menu a.home {
-    background-color: var(--background-component);
-} */
-
 .sidebar-menu a:hover {
     background-color: var(--background-component);
 }
@@ -143,7 +144,6 @@ a {
 }
 
 /* main content */
-
 main {
     width: calc(100% - 241px);
     position: absolute;
@@ -167,6 +167,45 @@ section h1 {
     color: var(--primary-white);
 }
 
+section.about-book h1 {
+    font-size: 3rem;
+    line-height: 118%;
+    letter-spacing: 0.0025em;
+    font-weight: 600;
+}
+
+/* homepage - hero carousel */
+.carousel-open:checked + .carousel-item {
+    position: static;
+    opacity: 100;
+}
+.carousel-item {
+    -webkit-transition: opacity 0.6s ease-out;
+    transition: opacity 0.6s ease-out;
+}
+#carousel-1:checked ~ .control-1,
+#carousel-2:checked ~ .control-2,
+#carousel-3:checked ~ .control-3 {
+    display: block;
+}
+.carousel-indicators {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    position: absolute;
+    bottom: 2%;
+    left: 0;
+    right: 0;
+    text-align: center;
+    z-index: 10;
+}
+#carousel-1:checked ~ .control-1 ~ .carousel-indicators li:nth-child(1) .carousel-bullet,
+#carousel-2:checked ~ .control-2 ~ .carousel-indicators li:nth-child(2) .carousel-bullet,
+#carousel-3:checked ~ .control-3 ~ .carousel-indicators li:nth-child(3) .carousel-bullet {
+    color: #2b6cb0;  /*Set to match the Tailwind colour you want the active one to be */
+}
+
+/* cards */
 .cards {
     display: grid;
     grid-template-rows: 1fr;
@@ -222,4 +261,97 @@ a .card:hover {
     letter-spacing: 0.005em;
     font-weight: 600;
     color: var(--primary-white);
+}
+
+/* explore page - cards category */
+.cards-category{
+    display: grid;
+    grid-template-rows: 1fr;
+    grid-template-columns: repeat(auto-fill,minmax(180px,1fr));
+    grid-gap: 24px;
+}
+
+.cards-category .card-category {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* max-width: 208px;
+    min-height: 134px; */
+    padding: 54px 0;
+    border-radius: 6px;
+    background-color: var(--background-component-2);
+}
+
+.card-category {
+    font-size: 1.375rem;
+    line-height: 118%;
+    letter-spacing: 0.0025em;
+    font-weight: 600;
+    color: var(--primary-white);
+}
+
+.cards-category a .card-category:hover {
+    background-color: var(--background-component);
+}
+
+/* homepage - recent container */
+table {
+    border-collapse:separate; 
+    border-spacing: 0 4px;
+  }
+
+.recent-container table {
+    width: 100%;
+}
+
+.recent-container table th {
+    text-align: left;
+}
+
+.recent-container .line-separator {
+    width: 100%;
+    height: 1px;
+    background-color: var(--background-component);
+    margin-bottom: 8px;
+}
+
+.head-table th {
+    font-size: 0.75rem;
+    line-height: 170%;
+    letter-spacing: 0.015em;
+    color: var(--primary-white);
+    padding: 8px 0;
+}
+
+.recent-container .data td {
+    padding: 8px;
+    font-size: 1rem;
+    align-items: center;
+    line-height: 150%;
+    letter-spacing: 0.005em;
+    color: var(--primary-white);
+    vertical-align: middle;
+    cursor: pointer;
+}
+
+.recent-container .data td.title-thumb, .recent-container .data span.material-icons {
+    border-radius: 6px 0 0 6px;
+    display: flex;
+    gap: 16px;
+}
+
+.recent-container .data td.more {
+    border-radius: 0 6px 6px 0;
+}
+
+.recent-container tr.data:hover td {
+    background-color: var(--background-component-2);
+}
+
+/* button */
+.btn {
+    font-size: 0.875rem;
+    line-height: 150%;
+    letter-spacing: 1.25px;
+    font-weight: 600;
 }

@@ -6,8 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Potret</title>
     <link rel="icon" href="../images/Logo Aulabaca mark.svg" type = "image/x-icon">
-    <link rel="stylesheet" href="../css/style.css">
-    <link rel="stylesheet" href="../css/bookpage.css">
+    <link rel="stylesheet" href="../css/tailwind.css">
+    <link rel="stylesheet" href="../style.css">
     <script src="https://kit.fontawesome.com/d18fc7336b.js" crossorigin="anonymous"></script>
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
       rel="stylesheet">
@@ -74,24 +74,24 @@
     <main>
         <div class="content">
             <!-- About the book -->
-            <section class="about-book p-6 rounded-xl">
+            <section class="about-book flex flex-row gap-6 p-6 rounded-xl bg-background-component-2">
                 <div class="book-cover">
-                    <img src="../resources/books/potret.jpeg" alt="book cover">
+                    <img src="../resources/books/potret.jpeg" alt="book cover" class="w-52 rounded-md">
                 </div>
-                <div class="book-info">
-                    <div class="txt-info">
-                        <h1>Potret</h1>
-                        <p>Oleh <a href="#">Aditia Yudis</a></p>
-                        <p>Buku - Romance</p>
-                        <p>Diterbitkan pada tanggal 30 Oktober 2015</p>
-                        <p>12.771x dibaca</p>
+                <div class="book-info flex flex-col justify-between p-4">
+                    <div class="txt-info text-subtext">
+                        <h1 class="text-5xl mb-2">Potret</h1>
+                        <p class="mb-2">Oleh <a href="#" class="font-semibold hover:underline">Aditia Yudis</a></p>
+                        <p class="mb-2">Buku - Romance</p>
+                        <p class="mb-2">Diterbitkan pada tanggal 30 Oktober 2015</p>
+                        <p class="mb-2">12.771x dibaca</p>
                     </div>
-                    <div class="btn">
-                        <a href="#" class="read-now">
+                    <div class="btn flex items-center">
+                        <a href="reading-page.html" class="read-now px-6 py-3 bg-component rounded-full hover:bg-hover-component">
                             BACA SEKARANG
                         </a>
-                        <a href="#" class="add-library">
-                                <span class="material-icons">favorite_border</span>
+                        <a href="#" class="add-library px-6 py-3 flex items-center gap-2 rounded-full hover:bg-opacity-10 hover:bg-primary-white" style="color: #D44467;">
+                                <span class="material-icons" style="font-size: 21px;">favorite_border</span>
                                 TAMBAHKAN KE LIBRARY
                         </a>
                     </div>
@@ -99,10 +99,10 @@
             </section>
 
             <!-- Description of the book -->
-            <section class="p-6 rounded-xl">
+            <section class="p-6 rounded-xl bg-background-component-2">
                 <div class="description-book">
                     <h1>Sinopsis</h1>
-                    <div class="txt-content">
+                    <div class="txt-content text-primary-white">
                         <p>
                             ---
                             <br><br><br>

@@ -150,3 +150,7 @@ a {
 .chips .chip {
     background-color: var(--background-component);
 }
+
+.chips a.chip:hover {
+    background-color: var(--background-component-2);
+}

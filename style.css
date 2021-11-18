@@ -134,13 +134,17 @@ a {
     gap: 16px;
 }
 
-.navbar .profile p {
+.profile p {
     font-family: 'Work Sans', sans-serif;
     font-size: 1rem;
     line-height: 150%;
     letter-spacing: 0.005em;
     font-weight: 600;
     color: var(--primary-white);
+}
+
+.navbar-menu {
+    z-index: 1000;
 }
 
 /* main content */
@@ -320,7 +324,7 @@ table {
     line-height: 170%;
     letter-spacing: 0.015em;
     color: var(--primary-white);
-    padding: 8px 0;
+    padding: 8px;
 }
 
 .recent-container .data td {

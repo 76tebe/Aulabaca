@@ -359,3 +359,45 @@ table {
     letter-spacing: 1.25px;
     font-weight: 600;
 }
+
+/* reading-page - book info on sidebar */
+.book-info {
+    font-size: 0.875rem;
+    line-height: 150%;
+    letter-spacing: 0.025em;
+    font-weight: 500;
+    color: var(--primary-white);
+}
+
+.description-book .txt-content p {
+    font-size: 1rem;
+    line-height: 170%;
+    letter-spacing: 0.005em;
+    color: var(--primary-white);
+}
+
+/* reading-page - reading font */
+
+.reading-page.paper {
+    font-family: 'PT Serif', serif;
+    text-align: justify;
+    letter-spacing: 0.02em;
+    color: #292929;
+}
+
+.reading-page.paper h1 {
+    font-size: 3rem;
+    line-height: 150%;
+    font-weight: 700;
+}
+
+.reading-page.paper h2 {
+    font-size: 1.5rem;
+    line-height: 32px;
+}
+
+.reading-page.paper p {
+    font-size: 1rem;
+    line-height: 32px;
+    text-indent: 32px;
+}

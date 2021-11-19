@@ -19,6 +19,10 @@
         padding: 16px;
         left: 0;
     }
+
+    .about-book .add-library span.txt-library {
+        display: none;
+    }
 }
 
 @media only screen and (max-width: 640px) {
@@ -28,5 +32,19 @@
 
     .cards {
         grid-template-columns: repeat(3,minmax(180px,1fr));
+    }
+
+    section.about-book {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    section.about-book .book-info {
+        text-align: center;
+        align-items: center;
+    }
+
+    section.about-book .book-info .txt-info {
+        margin-bottom: 40px;
     }
 }

@@ -6,15 +6,493 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Aulabaca</title>
     <link rel="icon" href="../images/Logo Aulabaca mark.svg" type = "image/x-icon">
-    <link rel="stylesheet" href="../css/reset.css">
-    <link rel="stylesheet" href="../css/fonts.css">
-    <link rel="stylesheet" href="../css/colors.css">
+    <link rel="stylesheet" href="../css/tailwind.css">
+    <link rel="stylesheet" href="../style.css">
+    <link rel="stylesheet" href="../css/responsive.css">
     <script src="https://kit.fontawesome.com/d18fc7336b.js" crossorigin="anonymous"></script>
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
       rel="stylesheet">
 </head>
 <body>
-  
-  
+    <!-- Navigation -->
+
+    <!-- sidebar -->
+    <div class="sidebar">
+        <div class="container">
+            <a href="../src/homepage.html" class="logo-container">
+                <img src="../images/Logo Aulabaca.svg" alt="Aulabaca" class="logo">
+            </a>
+            <div class="upload-container">
+                <a href="#" class="btn upload">
+                    <i class="fas fa-plus" style="font-size: 24px;"></i>
+                    <span>UPLOAD</span>
+                </a>
+                <div class="info">
+                    <p>Publikasikan cerita, artikel, atau jurnal Anda sendiri.</p>
+                </div>
+            </div>
+            <div class="sidebar-menu">
+                <a href="javascript:void(0)" class="btn home bg-background-component">
+                    <span class="material-icons md-24">
+                        home
+                    </span>
+                    <span>Home</span>
+                </a>
+                <a href="./explore.html" class="btn explore">
+                    <span class="material-icons md-24">
+                        search
+                    </span>
+                    <span>Explore</span>
+                </a>
+                <a href="./library.html" class="btn my-library">
+                    <span class="material-icons md-24">
+                        local_library
+                    </span>
+                    <span>Library</span>
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <!-- navbar -->
+    <nav class="navbar fixed px-4 py-4 flex justify-between items-center bg-white">
+        <!-- searchbar here -->
+        <div class="searchbar">
+            <span class="material-icons md-24">
+                        search
+                    </span>
+            <input type="search" name="search" id="search" placeholder="Cari penulis, buku, artikel, atau jurnal">
+        </div>
+		
+		<div class="lg:hidden">
+			<button class="navbar-burger flex items-center text-primary-white p-3">
+				<svg class="block h-7 w-7 fill-current" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+					<title>Mobile menu</title>
+					<path d="M0 3h20v2H0V3zm0 6h20v2H0V9zm0 6h20v2H0v-2z"></path>
+				</svg>
+			</button>
+		</div>
+
+        <!-- btn login/signup/profile here -->
+		<div class="profile">
+            <a href="#" class="profile">
+                <p>Tubagus Ghiffari Maulana</p>
+                <img src="../images/profile-picture.png" alt="Profile Picture">
+            </a>
+        </div>
+	</nav>
+	<div class="navbar-menu relative z-50 hidden">
+		<div class="navbar-backdrop fixed inset-0 bg-gray-800 opacity-25"></div>
+		<nav class="fixed top-0 left-0 bottom-0 flex flex-col w-3/6 max-w-sm px-4 py-6 bg-background overflow-y-auto">
+			<div class="flex items-center mb-14">
+				<a class="mr-10 text-3xl font-bold leading-none" href="./homepage.html">
+					<img src="../images/Logo Aulabaca.svg" alt="logo">
+				</a>
+				<button class="navbar-close">
+					<svg class="h-7 w-7 text-primary-white cursor-pointer hover:text-gray-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+						<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+					</svg>
+				</button>
+			</div>
+            <div class="profile flex justify-center mb-12">
+                <a href="#" class="profile flex flex-col text-center items-center gap-4">
+                    <img src="../images/profile-picture.png" alt="Profile Picture" class="w-24 h-24">
+                    <p>Tubagus Ghiffari Maulana</p>
+                </a>
+            </div>
+			<div>
+				<div class="upload-container">
+                    <a href="#" class="btn upload px-4 py-2 mb-1 text-background bg-primary-white">
+                        <i class="fas fa-plus" style="font-size: 24px;"></i>
+                        <span>UPLOAD</span>
+                    </a>
+                    <div class="info">
+                        <p>Publikasikan cerita, artikel, atau jurnal Anda sendiri.</p>
+                    </div>
+                </div>
+                <div class="sidebar-menu">
+                    <a href="javascript:void(0)" class="btn home bg-background-component px-4 py-2 mb-1">
+                        <span class="material-icons md-24">
+                            home
+                        </span>
+                        <span>Home</span>
+                    </a>
+                    <a href="./explore.html" class="btn explore px-4 py-2 mb-1">
+                        <span class="material-icons md-24">
+                            search
+                        </span>
+                        <span>Explore</span>
+                    </a>
+                    <a href="./library.html" class="btn my-library px-4 py-2 mb-1">
+                        <span class="material-icons md-24">
+                            local_library
+                        </span>
+                        <span>Library</span>
+                    </a>
+                </div>
+			</div>
+            <!-- login/signup/book-info here -->
+			
+		</nav>
+	</div>
+    <main>
+        <div class="content">
+            <!-- Hero carousel -->
+            <div class="hero-carousel mb-12">
+                <div class="carousel relative shadow-2xl bg-white">
+                    <div class="carousel-inner relative overflow-hidden w-full">
+                      <!--Slide 1-->
+                        <input class="carousel-open" type="radio" id="carousel-1" name="carousel" aria-hidden="true" hidden="" checked="checked">
+                        <div class="carousel-item absolute opacity-0 h-96">
+                            <div class="block h-full w-full bg-indigo-500 text-white text-5xl text-center flex justify-center">
+                                <img src="../images/Logo Aulabaca mono.svg" alt="">
+                            </div>
+                        </div>
+                        <label for="carousel-3" class="prev control-1 w-10 h-10 ml-2 md:ml-10 absolute cursor-pointer hidden text-3xl font-bold text-black hover:text-white rounded-full bg-white hover:bg-blue-700 leading-tight text-center z-10 inset-y-0 left-0 my-auto">‹</label>
+                        <label for="carousel-2" class="next control-1 w-10 h-10 mr-2 md:mr-10 absolute cursor-pointer hidden text-3xl font-bold text-black hover:text-white rounded-full bg-white hover:bg-blue-700 leading-tight text-center z-10 inset-y-0 right-0 my-auto">›</label>
+                        
+                        <!--Slide 2-->
+                        <input class="carousel-open" type="radio" id="carousel-2" name="carousel" aria-hidden="true" hidden="">
+                        <div class="carousel-item absolute opacity-0 h-96">
+                            <div class="block h-full w-full bg-yellow-300 text-white text-5xl text-center">Slide 2</div>
+                        </div>
+                        <label for="carousel-1" class="prev control-2 w-10 h-10 ml-2 md:ml-10 absolute cursor-pointer hidden text-3xl font-bold text-black hover:text-white rounded-full bg-white hover:bg-blue-700 leading-tight text-center z-10 inset-y-0 left-0 my-auto">‹</label>
+                        <label for="carousel-3" class="next control-2 w-10 h-10 mr-2 md:mr-10 absolute cursor-pointer hidden text-3xl font-bold text-black hover:text-white rounded-full bg-white hover:bg-blue-700 leading-tight text-center z-10 inset-y-0 right-0 my-auto">›</label> 
+                        
+                        <!--Slide 3-->
+                        <input class="carousel-open" type="radio" id="carousel-3" name="carousel" aria-hidden="true" hidden="">
+                        <div class="carousel-item absolute opacity-0 h-96">
+                            <div class="block h-full w-full bg-green-500 text-white text-5xl text-center">Slide 3</div>
+                        </div>
+                        <label for="carousel-2" class="prev control-3 w-10 h-10 ml-2 md:ml-10 absolute cursor-pointer hidden text-3xl font-bold text-black hover:text-white rounded-full bg-white hover:bg-blue-700 leading-tight text-center z-10 inset-y-0 left-0 my-auto">‹</label>
+                        <label for="carousel-1" class="next control-3 w-10 h-10 mr-2 md:mr-10 absolute cursor-pointer hidden text-3xl font-bold text-black hover:text-white rounded-full bg-white hover:bg-blue-700 leading-tight text-center z-10 inset-y-0 right-0 my-auto">›</label>
+                
+                        <!-- Add additional indicators for each slide-->
+                        <ol class="carousel-indicators">
+                            <li class="inline-block mr-3">
+                                <label for="carousel-1" class="carousel-bullet cursor-pointer block text-4xl text-white hover:text-blue-700">•</label>
+                            </li>
+                            <li class="inline-block mr-3">
+                                <label for="carousel-2" class="carousel-bullet cursor-pointer block text-4xl text-white hover:text-blue-700">•</label>
+                            </li>
+                            <li class="inline-block mr-3">
+                                <label for="carousel-3" class="carousel-bullet cursor-pointer block text-4xl text-white hover:text-blue-700">•</label>
+                            </li>
+                        </ol>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Terakhir dibaca -->
+            <section>
+                <h1>Terakhir dibaca</h1>
+                <div class="recent-container">
+                    <table>
+                        <tr class="head-table">
+                            <th>JUDUL</th>
+                            <th class="table-author">PENULIS</th>
+                            <th class="table-category">KATEGORI</th>
+                            <th class="table-release-date">TANGGAL RILIS</th>
+                        </tr>
+                        <tr>
+                            <td><div class="line-separator"></div></td>
+                            <td class="table-author"><div class="line-separator"></div></td>
+                            <td class="table-category"><div class="line-separator"></div></td>
+                            <td class="table-release-date"><div class="line-separator"></div></td>
+                            <td class="fav"><div class="line-separator"></div></td>
+                            <td class="more"><div class="line-separator"></div></td>
+                        </tr>
+                        <tr class="data first">
+                            <td class="title-thumb">
+                                <img src="../images/thumb/1.png" alt="thumbnail">
+                                Cara menangkap ikan lele di Samudera Pasifik
+                            </td>
+                            <td class="table-author">Williamson</td>
+                            <td class="table-category">Artikel</td>
+                            <td class="table-release-date">24 Maret 2018</td>
+                            <td class="fav"><span class="material-icons">favorite</span></td>
+                            <td class="more"><span class="material-icons">more_horiz</span></td>
+                        </tr>
+                        <tr class="data">
+                            <td class="title-thumb">
+                                <img src="../images/thumb/2.png" alt="thumbnail">
+                                Modeling brain connectivity dynamics in functional m...
+                            </td>
+                            <td class="table-author">Brooklyn Simmons</td>
+                            <td class="table-category">Jurnal</td>
+                            <td class="table-release-date">03 Desember 2009</td>
+                            <td class="fav"><span class="material-icons">favorite</span></td>
+                            <td class="more"><span class="material-icons">more_horiz</span></td>
+                        </tr>
+                        <tr class="data">
+                            <td class="title-thumb">
+                                <img src="../images/thumb/3.png" alt="thumbnail">
+                                Seni bertahan hidup untuk mahasiswa baru
+                            </td>
+                            <td class="table-author">Albert Flores</td>
+                            <td class="table-category">Buku</td>
+                            <td class="table-release-date">22 Juni 2020</td>
+                            <td class="fav"><span class="material-icons">favorite</span></td>
+                            <td class="more"><span class="material-icons">more_horiz</span></td>
+                        </tr>
+                    </table>
+                </div>
+            </section>
+
+            <!-- Buku terpopuler -->
+            <section>
+                <h1>Buku terpopuler bulan ini</h1>
+                <div class="cards">
+                    <a href="./bookpage.html">
+                        <div class="card buku">
+                            <img src="../images/books/kambing-jantan.png" alt="book cover">
+                            <div class="txt-content">
+                                <h2>Kambing Jantan</h2>
+                                <p>Raditya Dika</p>
+                                <p>62.722x dibaca</p>
+                            </div>
+                        </div>
+                    </a>
+                    <a href="./bookpage.html">
+                        <div class="card buku">
+                            <img src="../images/books/ruang-cerita.png" alt="book cover">
+                            <div class="txt-content">
+                                <h2>Ruang Cerita</h2>
+                                <p>Syahrul Faulifa</p>
+                                <p>58.021x dibaca</p>
+                            </div>
+                        </div>
+                    </a>
+                    <a href="./bookpage.html">
+                        <div class="card buku">
+                            <img src="../images/books/the-locked-out.png" alt="book cover">
+                            <div class="txt-content">
+                                <h2>The Locked Out</h2>
+                                <p>Honey Dee</p>
+                                <p>60.801x dibaca</p>
+                            </div>
+                        </div>
+                    </a>
+                    <a href="./bookpage.html">
+                        <div class="card buku">
+                            <img src="../images/books/espresso.png" alt="book cover">
+                            <div class="txt-content">
+                                <h2>Espresso</h2>
+                                <p>Bernard Batubara</p>
+                                <p>48.911x dibaca</p>
+                            </div>
+                        </div>
+                    </a>
+                    <a href="./bookpage.html">
+                        <div class="card buku">
+                            <img src="../images/books/the-secret-of-life.png" alt="book cover">
+                            <div class="txt-content">
+                                <h2>The Secret of Life</h2>
+                                <p>Novin Pratiwi</p>
+                                <p>42.741x dibaca</p>
+                            </div>
+                        </div>
+                    </a>
+                    <a href="./bookpage.html">
+                        <div class="card buku">
+                            <img src="../images/books/origami-rasa.png" alt="book cover">
+                            <div class="txt-content">
+                                <h2>Origami Rasa</h2>
+                                <p>Fitri Inayah</p>
+                                <p>55.312x dibaca</p>
+                            </div>
+                        </div>
+                    </a>
+                    <a href="./bookpage.html">
+                        <div class="card buku">
+                            <img src="../images/books/perahu-kertas.png" alt="book cover">
+                            <div class="txt-content">
+                                <h2>Perahu Kertas</h2>
+                                <p>Dee Lestari</p>
+                                <p>48.501x dibaca</p>
+                            </div>
+                        </div>
+                    </a>
+                    <a href="./bookpage.html">
+                        <div class="card buku">
+                            <img src="../images/books/melukis-hujan.png" alt="book cover">
+                            <div class="txt-content">
+                                <h2>Melukis Hujan</h2>
+                                <p>Heri Billy</p>
+                                <p>55.251x dibaca</p>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            </section>
+
+            <!-- Buku pilihan -->
+            <section>
+                <h1>Buku pilihan</h1>
+                <div class="cards">
+                    <a href="./bookpage.html">
+                        <div class="card buku">
+                            <img src="../images/books/diary-kubu.png" alt="book cover">
+                            <div class="txt-content">
+                                <h2>Diary Kubu</h2>
+                                <p>Linda</p>
+                                <p>12.932x dibaca</p>
+                            </div>
+                        </div>
+                    </a>
+                    <a href="./bookpage.html">
+                        <div class="card buku">
+                            <img src="../images/books/hyouka.png" alt="book cover">
+                            <div class="txt-content">
+                                <h2>Hyouka</h2>
+                                <p>Yonezawa Honobu</p>
+                                <p>23.213x dibaca</p>
+                            </div>
+                        </div>
+                    </a>
+                    <a href="./bookpage.html">
+                        <div class="card buku">
+                            <img src="../images/books/potret.png" alt="book cover">
+                            <div class="txt-content">
+                                <h2>Potret</h2>
+                                <p>Aditia Yudis</p>
+                                <p>25.291x dibaca</p>
+                            </div>
+                        </div>
+                    </a>
+                    <a href="./bookpage.html">
+                        <div class="card buku">
+                            <img src="../images/books/dear-jane.png" alt="book cover">
+                            <div class="txt-content">
+                                <h2>Dear Jane</h2>
+                                <p>Pratiwi Juliani</p>
+                                <p>7.211x dibaca</p>
+                            </div>
+                        </div>
+                    </a>
+                    <a href="./bookpage.html">
+                        <div class="card buku">
+                            <img src="../images/books/the-wolf-master.png" alt="book cover">
+                            <div class="txt-content">
+                                <h2>The Wolf Master</h2>
+                                <p>Winar Citra</p>
+                                <p>9.492x dibaca</p>
+                            </div>
+                        </div>
+                    </a>
+                    <a href="./bookpage.html">
+                        <div class="card buku">
+                            <img src="../images/books/ganjil-genap.png" alt="book cover">
+                            <div class="txt-content">
+                                <h2>Ganjil Genap</h2>
+                                <p>Almira Bastari</p>
+                                <p>22.291x dibaca</p>
+                            </div>
+                        </div>
+                    </a>
+                    <a href="./bookpage.html">
+                        <div class="card buku">
+                            <img src="../images/books/denial.png" alt="book cover">
+                            <div class="txt-content">
+                                <h2>Denial</h2>
+                                <p>Kiranabi</p>
+                                <p>14.256x dibaca</p>
+                            </div>
+                        </div>
+                    </a>
+                    <a href="./bookpage.html">
+                        <div class="card buku">
+                            <img src="../images/books/laskar-pelangi.png" alt="book cover">
+                            <div class="txt-content">
+                                <h2>Laskar Pelangi</h2>
+                                <p>Andrea Hirata</p>
+                                <p>92.771x dibaca</p>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            </section>
+
+            <!-- Penulis terpopuler -->
+            <section>
+                <h1>Penulis terpopuler bulan ini</h1>
+                <div class="cards">
+                    <a href="#">
+                        <div class="card">
+                            <img src="../images/author-picture/raditya-dika.png" alt="author picture">
+                            <div class="txt-content">
+                                <h2>Raditya Dika</h2>
+                                <p>1.048.251 pembaca</p>
+                            </div>
+                        </div>
+                    </a>
+                    <a href="#">
+                        <div class="card">
+                            <img src="../images/author-picture/author1.png" alt="author picture">
+                            <div class="txt-content">
+                                <h2>Albert Flores</h2>
+                                <p>1.012.360 pembaca</p>
+                            </div>
+                        </div>
+                    </a>
+                    <a href="#">
+                        <div class="card">
+                            <img src="../images/author-picture/jk-rowling.png" alt="author picture">
+                            <div class="txt-content">
+                                <h2>J.K. Rowling</h2>
+                                <p>994.729 pembaca</p>
+                            </div>
+                        </div>
+                    </a>
+                    <a href="#">
+                        <div class="card">
+                            <img src="../images/author-picture/mark-manson.png" alt="author picture">
+                            <div class="txt-content">
+                                <h2>Mark Manson</h2>
+                                <p>883.919 pembaca</p>
+                            </div>
+                        </div>
+                    </a>
+                    <a href="#">
+                        <div class="card">
+                            <img src="../images/author-picture/robert-kiyosaki.png" alt="author picture">
+                            <div class="txt-content">
+                                <h2>Robert Kiyosaki</h2>
+                                <p>883.919 pembaca</p>
+                            </div>
+                        </div>
+                    </a>
+                    <a href="#">
+                        <div class="card">
+                            <img src="../images/author-picture/napoleon-hill.png" alt="author picture">
+                            <div class="txt-content">
+                                <h2>Napoleon Hill</h2>
+                                <p>816.231 pembaca</p>
+                            </div>
+                        </div>
+                    </a>
+                    <a href="#">
+                        <div class="card">
+                            <img src="../images/author-picture/dee-lestari.png" alt="author picture">
+                            <div class="txt-content">
+                                <h2>Dee Lestari</h2>
+                                <p>794.977 pembaca</p>
+                            </div>
+                        </div>
+                    </a>
+                    <a href="#">
+                        <div class="card">
+                            <img src="../images/author-picture/theresa-webb.png" alt="author picture">
+                            <div class="txt-content">
+                                <h2>Theresa Webb</h2>
+                                <p>749.242 pembaca</p>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            </section>
+        </div>
+    </main>
+    <script src="../js/main.js" type="text/javascript"></script>
 </body>
 </html>

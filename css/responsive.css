@@ -26,12 +26,17 @@
 }
 
 @media only screen and (max-width: 640px) {
-    .recent-container .table-author, .recent-container .table-category, .recent-container .table-release-date, .recent-container .fav, .recent-container .more {
+
+    .recent-container .table-author,
+    .recent-container .table-category,
+    .recent-container .table-release-date,
+    .recent-container .fav,
+    .recent-container .more {
         display: none;
     }
 
     .cards {
-        grid-template-columns: repeat(3,minmax(180px,1fr));
+        grid-template-columns: repeat(3, minmax(180px, 1fr));
     }
 
     section.about-book {
@@ -48,5 +53,5 @@
         margin-bottom: 40px;
     }
 
-    
+
 }

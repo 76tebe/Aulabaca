@@ -11,7 +11,7 @@
     <link rel="stylesheet" href="../style.css">
     <link rel="stylesheet" href="../css/responsive.css">
     <script src="https://kit.fontawesome.com/d18fc7336b.js" crossorigin="anonymous"></script>
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Material+Icons|Material+Icons+Outlined|Material+Icons+Two+Tone|Material+Icons+Round|Material+Icons+Sharp" rel="stylesheet">
 </head>
 
 <body>
@@ -33,24 +33,33 @@
             </div>
             <div class="sidebar-menu">
                 <a href="javascript:void(0)" class="btn home bg-background-component">
-                    <span class="material-icons md-24">
+                    <span class="material-icons material-icons-round">
                         home
-                    </span>
+                        </span>
                     <span>Home</span>
                 </a>
                 <a href="./explore.html" class="btn explore">
-                    <span class="material-icons md-24">
+                    <span class="material-icons material-icons-round">
                         search
                     </span>
                     <span>Explore</span>
                 </a>
                 <a href="./library.html" class="btn my-library">
-                    <span class="material-icons md-24">
+                    <span class="material-icons material-icons-round">
                         local_library
                     </span>
                     <span>Library</span>
                 </a>
             </div>
+        </div>
+        <div class="btn auth profile flex flex-col mt-auto mb-6">
+            <a href="../index.html"
+              class="register flex items-center gap-4 w-full px-6 py-2 rounded-full hover:bg-opacity-10 hover:bg-primary-white">
+              <span class="material-icons material-icons-round">
+                logout
+                </span>
+              LOGOUT
+            </a>
         </div>
     </div>
 
@@ -58,7 +67,7 @@
     <nav class="navbar fixed px-4 py-4 flex justify-between items-center bg-white">
         <!-- searchbar here -->
         <div class="searchbar">
-            <span class="material-icons md-24">
+            <span class="material-icons-round material-icons">
                 search
             </span>
             <input type="search" name="search" id="search" placeholder="Cari penulis, buku, artikel, atau jurnal">
@@ -114,19 +123,19 @@
                 </div>
                 <div class="sidebar-menu">
                     <a href="javascript:void(0)" class="btn home bg-background-component px-4 py-2 mb-1">
-                        <span class="material-icons md-24">
+                        <span class="material-icons material-icons-round">
                             home
                         </span>
                         <span>Home</span>
                     </a>
                     <a href="./explore.html" class="btn explore px-4 py-2 mb-1">
-                        <span class="material-icons md-24">
+                        <span class="material-icons material-icons-round">
                             search
                         </span>
                         <span>Explore</span>
                     </a>
                     <a href="./library.html" class="btn my-library px-4 py-2 mb-1">
-                        <span class="material-icons md-24">
+                        <span class="material-icons material-icons-round">
                             local_library
                         </span>
                         <span>Library</span>
@@ -134,7 +143,15 @@
                 </div>
             </div>
             <!-- login/signup/book-info here -->
-
+            <div class="btn auth profile flex flex-col mt-auto">
+                <a href="../index.html"
+                  class="register flex items-center gap-4 w-full px-6 py-2 rounded-full hover:bg-opacity-10 hover:bg-primary-white">
+                  <span class="material-icons">
+                    logout
+                    </span>
+                  LOGOUT
+                </a>
+            </div>
         </nav>
     </div>
     <main>
@@ -237,7 +254,7 @@
                             <td class="table-author">Williamson</td>
                             <td class="table-category">Artikel</td>
                             <td class="table-release-date">24 Maret 2018</td>
-                            <td class="fav"><span class="material-icons">favorite</span></td>
+                            <td class="fav"><span class="material-icons  material-icons-round">favorite</span></td>
                             <td class="more"><span class="material-icons">more_horiz</span></td>
                         </tr>
                         <tr class="data">
@@ -248,7 +265,7 @@
                             <td class="table-author">Brooklyn Simmons</td>
                             <td class="table-category">Jurnal</td>
                             <td class="table-release-date">03 Desember 2009</td>
-                            <td class="fav"><span class="material-icons">favorite</span></td>
+                            <td class="fav"><span class="material-icons material-icons-round">favorite_border</span></td>
                             <td class="more"><span class="material-icons">more_horiz</span></td>
                         </tr>
                         <tr class="data">
@@ -259,7 +276,7 @@
                             <td class="table-author">Albert Flores</td>
                             <td class="table-category">Buku</td>
                             <td class="table-release-date">22 Juni 2020</td>
-                            <td class="fav"><span class="material-icons">favorite</span></td>
+                            <td class="fav"><span class="material-icons material-icons-round">favorite</span></td>
                             <td class="more"><span class="material-icons">more_horiz</span></td>
                         </tr>
                     </table>

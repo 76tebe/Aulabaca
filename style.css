@@ -377,8 +377,9 @@ table {
 
 .description-book .txt-content p {
     font-size: 1rem;
-    line-height: 170%;
+    line-height: 200%;
     letter-spacing: 0.005em;
+    font-weight: 300;
     color: var(--primary-white);
 }
 
@@ -412,4 +413,13 @@ input:focus {
     outline: none !important;
     border: 2px solid var(--component);
     box-shadow: 0 0 8px #719ECE;
+}
+
+/* author - author font */
+.author-info {
+    font-size: 1rem;
+    line-height: 200%;
+    letter-spacing: 0.005em;
+    font-weight: 300;
+    color: var(--primary-white);
 }

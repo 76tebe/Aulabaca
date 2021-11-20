@@ -189,6 +189,24 @@ section.about-book h1 {
     transition: opacity 0.6s ease-out;
 }
 
+.carousel-image-1 {
+    background-image: url('./images/hero/hero-1.svg');
+    background-size: cover;
+    background-position: center;
+}
+
+.carousel-image-2 {
+    background-image: url('./images/hero/hero-2.svg');
+    background-size: cover;
+    background-position: center;
+}
+
+.carousel-image-3 {
+    background-image: url('./images/hero/hero-3.svg');
+    background-size: cover;
+    background-position: center;
+}
+
 #carousel-1:checked~.control-1,
 #carousel-2:checked~.control-2,
 #carousel-3:checked~.control-3 {

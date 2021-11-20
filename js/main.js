@@ -4,14 +4,14 @@
 // });
 
 // Burger menus
-document.addEventListener('DOMContentLoaded', function() {
+document.addEventListener('DOMContentLoaded', function () {
     // open
     const burger = document.querySelectorAll('.navbar-burger');
     const menu = document.querySelectorAll('.navbar-menu');
 
     if (burger.length && menu.length) {
         for (var i = 0; i < burger.length; i++) {
-            burger[i].addEventListener('click', function() {
+            burger[i].addEventListener('click', function () {
                 for (var j = 0; j < menu.length; j++) {
                     menu[j].classList.toggle('hidden');
                 }
@@ -25,7 +25,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
     if (close.length) {
         for (var i = 0; i < close.length; i++) {
-            close[i].addEventListener('click', function() {
+            close[i].addEventListener('click', function () {
                 for (var j = 0; j < menu.length; j++) {
                     menu[j].classList.toggle('hidden');
                 }
@@ -35,7 +35,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
     if (backdrop.length) {
         for (var i = 0; i < backdrop.length; i++) {
-            backdrop[i].addEventListener('click', function() {
+            backdrop[i].addEventListener('click', function () {
                 for (var j = 0; j < menu.length; j++) {
                     menu[j].classList.toggle('hidden');
                 }
@@ -43,3 +43,20 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     }
 });
+
+// upload file
+var file = document.getElementById('file-filter');
+
+file.onchange = function (e) {
+    var ext = this.value.match(/\.([^\.]+)$/)[1];
+    switch (ext) {
+        case 'doc':
+        case 'docx':
+            var fileName = e.target.files[0].name;
+            alert('File "' + fileName + '" berhasil di-upload :)');
+            break;
+        default:
+            alert('Upload file gagal :( silakan upload file berformat .doc atau .docx');
+            this.value = '';
+    }
+};

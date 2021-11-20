@@ -423,3 +423,66 @@ input:focus {
     font-weight: 300;
     color: var(--primary-white);
 }
+
+/* upload page */
+.upload-box {
+    width: 374px;
+    color: var(--primary-white);
+}
+
+.upload-box h3 {
+    font-size: 1rem;
+    line-height: 150%;
+    letter-spacing: 0.005em;
+    font-weight: 600;
+}
+
+.upload-box p {
+    font-size: 0.875rem;
+    line-height: 118%;
+    letter-spacing: 0.001em;
+    font-weight: 500;
+}
+
+.custom-file-filter.btn {
+    border-radius: 100px;
+}
+
+.form-wrapper .form {
+    display: flex;
+    flex-direction: column;
+    color: var(--background);
+    margin-bottom: 16px;
+}
+
+.form-wrapper .form label {
+    font-size: 0.875rem;
+    line-height: 150%;
+    letter-spacing: 0.0025em;
+    color: var(--primary-white);
+    margin-bottom: 8px;
+}
+
+.form-wrapper .form input, .form-wrapper .form textarea,
+.form-wrapper .form select {
+    padding: 16px;
+    font-size: 1rem;
+    line-height: 150%;
+    letter-spacing: 0.005em;
+    border-radius: 6px;
+}
+
+.form-wrapper .form select {
+    color: var(--background);
+    -moz-appearance: none;
+    -webkit-appearance: none;
+}
+
+.form-wrapper .form textarea {
+    height: 640px;
+}
+
+.submit-btn {
+    font-size: 0.875rem;
+    font-weight: 500;
+}

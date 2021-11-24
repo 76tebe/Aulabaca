@@ -91,6 +91,13 @@ a {
     background-color: var(--background-component);
 }
 
+/* toggle switch dark/light mode */
+#checkbox:checked + label .switch-ball{
+    background-color: white;
+    transform: translateX(32px);
+    transition: transform 0.3s linear;
+}
+
 .navbar {
     width: calc(100% - 241px);
     position: fixed;

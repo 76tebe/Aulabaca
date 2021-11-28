@@ -11,7 +11,9 @@
   <link rel="stylesheet" href="./style.css">
   <link rel="stylesheet" href="./css/responsive.css">
   <script src="https://kit.fontawesome.com/d18fc7336b.js" crossorigin="anonymous"></script>
-  <link href="https://fonts.googleapis.com/css?family=Material+Icons|Material+Icons+Outlined|Material+Icons+Two+Tone|Material+Icons+Round|Material+Icons+Sharp" rel="stylesheet">
+  <link
+    href="https://fonts.googleapis.com/css?family=Material+Icons|Material+Icons+Outlined|Material+Icons+Two+Tone|Material+Icons+Round|Material+Icons+Sharp"
+    rel="stylesheet">
 </head>
 
 <body>
@@ -23,7 +25,7 @@
         <img src="./images/Logo Aulabaca.svg" alt="Aulabaca" class="logo">
       </a>
       <div class="upload-container">
-        <a href="./src/login.html" class="btn upload">
+        <a href="./src/login.html" class="btn upload hover:bg-hover-component">
           <i class="fas fa-plus" style="font-size: 24px;"></i>
           <span>UPLOAD</span>
         </a>
@@ -32,7 +34,8 @@
         </div>
       </div>
       <div class="sidebar-menu">
-        <a href="javascript:void(0)" class="btn home bg-background-component">
+        <a href="javascript:void(0)"
+          class="btn home bg-background-component-light text-component dark:bg-background-component">
           <span class="material-icons material-icons-round md-24">
             home
           </span>
@@ -52,10 +55,26 @@
         </a>
       </div>
     </div>
+    <!-- toggle switch dark/light mode -->
+    <div class="flex self-start items-center justify-center px-4 py-2 mt-12 text-primary-white">
+      <div class="flex justify-end items-center space-x-2 mx-auto relative">
+        <span class="text-sm font-medium text-primary-black dark:text-primary-white">Light </span>
+        <div>
+          <input type="checkbox" name="" id="checkbox" class="hidden" />
+          <label for="checkbox" class="cursor-pointer">
+            <div class="w-16 h-8 flex items-center bg-gray-300 rounded-full p2">
+              <div class="switch-ball w-7 h-7 bg-white rounded-full shadow ml-0.5 flex justify-center items-center">
+              </div>
+            </div>
+          </label>
+        </div>
+        <span class="text-sm font-semibold text-primary-black dark:text-primary-white">Dark</span>
+      </div>
+    </div>
   </div>
 
   <!-- navbar -->
-  <nav class="navbar fixed px-4 py-4 flex justify-between items-center bg-white">
+  <nav class="navbar fixed px-4 py-4 flex justify-between items-center">
     <!-- searchbar here -->
     <div class="searchbar">
       <span class="material-icons material-icons-round md-24">
@@ -65,7 +84,7 @@
     </div>
 
     <div class="lg:hidden">
-      <button class="navbar-burger flex items-center text-primary-white p-3">
+      <button class="navbar-burger flex items-center text-primary-black dark:text-primary-white p-3">
         <svg class="block h-7 w-7 fill-current" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
           <title>Mobile menu</title>
           <path d="M0 3h20v2H0V3zm0 6h20v2H0V9zm0 6h20v2H0v-2z"></path>
@@ -75,10 +94,12 @@
 
     <!-- btn login/signup/profile here -->
     <div class="btn auth profile">
-      <a href="./src/register.html" class="register px-6 py-2 rounded-full hover:bg-opacity-10 hover:bg-primary-white">
+      <a href="./src/register.html"
+        class="register px-6 py-2 rounded-full text-component hover:bg-opacity-10 dark:hover:bg-opacity-10 hover:bg-background-component-light dark:hover:bg-primary-white">
         DAFTAR
       </a>
-      <a href="./src/login.html" class="login px-6 py-2 rounded-full bg-component hover:bg-hover-component">
+      <a href="./src/login.html"
+        class="login px-6 py-2 rounded-full text-primary-white bg-component hover:bg-hover-component">
         MASUK
       </a>
     </div>
@@ -86,12 +107,12 @@
   <div class="navbar-menu relative z-50 hidden">
     <div class="navbar-backdrop fixed inset-0 bg-gray-800 opacity-25"></div>
     <nav class="fixed top-0 left-0 bottom-0 flex flex-col w-3/6 max-w-sm px-4 py-6 bg-background overflow-y-auto">
-      <div class="flex items-center mb-14">
+      <div class="flex justify-between items-center mb-14">
         <a class="mr-10 text-3xl font-bold leading-none" href="./index.html">
-          <img src="./images/Logo Aulabaca.svg" alt="logo">
+          <img src="./images/Logo Aulabaca.svg" alt="logo" class="max-h-10">
         </a>
         <button class="navbar-close">
-          <svg class="h-7 w-7 text-primary-white cursor-pointer hover:text-gray-500" xmlns="http://www.w3.org/2000/svg"
+          <svg class="h-7 w-7 text-primary-black dark:text-primary-white cursor-pointer hover:text-gray-500" xmlns="http://www.w3.org/2000/svg"
             fill="none" viewBox="0 0 24 24" stroke="currentColor">
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
           </svg>
@@ -99,7 +120,7 @@
       </div>
       <div class="profile hidden justify-center mb-12">
         <a href="#" class="profile flex flex-col text-center items-center gap-4">
-          <img src="./images/profile-picture.png" alt="Profile Picture" class="w-24 h-24">
+          <img src="./images/profile-picture-2.png" alt="Profile Picture" class="w-24 h-24">
           <p>Tubagus Ghiffari Maulana</p>
         </a>
       </div>
@@ -114,7 +135,7 @@
           </div>
         </div>
         <div class="sidebar-menu">
-          <a href="javascript:void(0)" class="btn home bg-background-component px-4 py-2 mb-1">
+          <a href="javascript:void(0)" class="btn home bg-background-component-light dark:bg-background-component px-4 py-2 mb-1">
             <span class="material-icons material-icons-round md-24">
               home
             </span>
@@ -134,14 +155,31 @@
           </a>
         </div>
       </div>
+      <!-- toggle switch dark/light mode -->
+      <div class="flex self-start items-center justify-center px-4 py-2 mt-12 text-primary-white">
+        <div class="flex justify-end items-center space-x-2 mx-auto relative">
+            <span class="text-sm font-medium text-primary-black dark:text-primary-white">Light </span>
+            <div>
+                <input type="checkbox" name="" id="checkbox" class="hidden" />
+                <label for="checkbox" class="cursor-pointer">
+                    <div class="w-16 h-8 flex items-center bg-gray-300 rounded-full p2">
+                        <div
+                            class="switch-ball w-7 h-7 bg-white rounded-full shadow ml-0.5 flex justify-center items-center">
+                        </div>
+                    </div>
+                </label>
+            </div>
+            <span class="text-sm font-semibold text-primary-black dark:text-primary-white">Dark</span>
+        </div>
+    </div>
       <!-- login/signup/book-info here -->
       <div class="btn auth profile flex flex-col mt-auto">
         <a href="./src/register.html"
-          class="register flex justify-center w-full px-6 py-2 rounded-full hover:bg-opacity-10 hover:bg-primary-white">
+          class="register flex justify-center w-full px-6 py-2 rounded-full text-component hover:bg-opacity-10 dark:hover:bg-opacity-10 hover:bg-background-component-light dark:hover:bg-primary-white">
           DAFTAR
         </a>
         <a href="./src/login.html"
-          class="login flex justify-center w-full px-6 py-2 rounded-full bg-component hover:bg-hover-component">
+          class="login flex justify-center w-full px-6 py-2 rounded-full text-primary-white bg-component hover:bg-hover-component">
           MASUK
         </a>
       </div>
@@ -151,19 +189,20 @@
     <div class="content">
       <!-- Hero carousel -->
       <div class="hero-carousel mb-12">
-        <div class="carousel relative shadow-2xl bg-white">
+        <div class="carousel relative shadow-lg bg-white">
           <div class="carousel-inner relative overflow-hidden w-full">
             <!--Slide 1-->
             <input class="carousel-open" type="radio" id="carousel-1" name="carousel" aria-hidden="true" hidden=""
               checked="checked">
             <div class="carousel-item absolute opacity-0 h-96">
-              <div class="carousel-image-1 block h-full w-full bg-indigo-500 text-white text-5xl text-center flex justify-center">
+              <div
+                class="carousel-image-1 block h-full w-full bg-indigo-500 text-white text-5xl text-center flex justify-center">
               </div>
             </div>
             <label for="carousel-3"
-              class="prev control-1 w-10 h-10 ml-2 md:ml-10 absolute cursor-pointer hidden text-3xl font-bold text-black hover:text-white rounded-full bg-white hover:bg-blue-700 leading-tight text-center z-10 inset-y-0 left-0 my-auto">‹</label>
+              class="prev control-1 w-10 h-10 ml-2 md:ml-10 absolute cursor-pointer hidden text-3xl font-bold text-black hover:text-white rounded-full bg-white hover:bg-component leading-tight text-center z-10 inset-y-0 left-0 my-auto">‹</label>
             <label for="carousel-2"
-              class="next control-1 w-10 h-10 mr-2 md:mr-10 absolute cursor-pointer hidden text-3xl font-bold text-black hover:text-white rounded-full bg-white hover:bg-blue-700 leading-tight text-center z-10 inset-y-0 right-0 my-auto">›</label>
+              class="next control-1 w-10 h-10 mr-2 md:mr-10 absolute cursor-pointer hidden text-3xl font-bold text-black hover:text-white rounded-full bg-white hover:bg-component leading-tight text-center z-10 inset-y-0 right-0 my-auto">›</label>
 
             <!--Slide 2-->
             <input class="carousel-open" type="radio" id="carousel-2" name="carousel" aria-hidden="true" hidden="">
@@ -171,9 +210,9 @@
               <div class="carousel-image-2 block h-full w-full bg-yellow-300 text-white text-5xl text-center"></div>
             </div>
             <label for="carousel-1"
-              class="prev control-2 w-10 h-10 ml-2 md:ml-10 absolute cursor-pointer hidden text-3xl font-bold text-black hover:text-white rounded-full bg-white hover:bg-blue-700 leading-tight text-center z-10 inset-y-0 left-0 my-auto">‹</label>
+              class="prev control-2 w-10 h-10 ml-2 md:ml-10 absolute cursor-pointer hidden text-3xl font-bold text-black hover:text-white rounded-full bg-white hover:bg-component leading-tight text-center z-10 inset-y-0 left-0 my-auto">‹</label>
             <label for="carousel-3"
-              class="next control-2 w-10 h-10 mr-2 md:mr-10 absolute cursor-pointer hidden text-3xl font-bold text-black hover:text-white rounded-full bg-white hover:bg-blue-700 leading-tight text-center z-10 inset-y-0 right-0 my-auto">›</label>
+              class="next control-2 w-10 h-10 mr-2 md:mr-10 absolute cursor-pointer hidden text-3xl font-bold text-black hover:text-white rounded-full bg-white hover:bg-component leading-tight text-center z-10 inset-y-0 right-0 my-auto">›</label>
 
             <!--Slide 3-->
             <input class="carousel-open" type="radio" id="carousel-3" name="carousel" aria-hidden="true" hidden="">
@@ -181,9 +220,9 @@
               <div class="carousel-image-3 block h-full w-full bg-green-500 text-white text-5xl text-center"></div>
             </div>
             <label for="carousel-2"
-              class="prev control-3 w-10 h-10 ml-2 md:ml-10 absolute cursor-pointer hidden text-3xl font-bold text-black hover:text-white rounded-full bg-white hover:bg-blue-700 leading-tight text-center z-10 inset-y-0 left-0 my-auto">‹</label>
+              class="prev control-3 w-10 h-10 ml-2 md:ml-10 absolute cursor-pointer hidden text-3xl font-bold text-black hover:text-white rounded-full bg-white hover:bg-component leading-tight text-center z-10 inset-y-0 left-0 my-auto">‹</label>
             <label for="carousel-1"
-              class="next control-3 w-10 h-10 mr-2 md:mr-10 absolute cursor-pointer hidden text-3xl font-bold text-black hover:text-white rounded-full bg-white hover:bg-blue-700 leading-tight text-center z-10 inset-y-0 right-0 my-auto">›</label>
+              class="next control-3 w-10 h-10 mr-2 md:mr-10 absolute cursor-pointer hidden text-3xl font-bold text-black hover:text-white rounded-full bg-white hover:bg-component leading-tight text-center z-10 inset-y-0 right-0 my-auto">›</label>
 
             <!-- Add additional indicators for each slide-->
             <ol class="carousel-indicators">

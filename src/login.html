@@ -7,11 +7,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Masuk ke Aulabaca</title>
     <link rel="icon" href="../images/Logo Aulabaca mark.svg" type="image/x-icon">
+    <link rel="stylesheet" href="../css/tailwind.css">
     <link rel="stylesheet" href="../css/auth.css">
 </head>
 
 <body>
-    <div class="container">
+    <div class="main">
         <div class="left-side">
             <header>
                 <div class="quote">
@@ -19,21 +20,40 @@
                 </div>
             </header>
             <div class="doodles">
-                <img src="../images/blobs-login.svg" alt="blobs" class="blobs">
-                <img src="../images/open-doodles-reading.svg" alt="open-doodles-reading" class="illustration">
+                <img src="../images/blobs-login.svg" alt="blobs" class="blobs dark">
+                <img src="../images/blobs-login-light.svg" alt="blobs" class="blobs light">
+                <img src="../images/open-doodles-reading.svg" alt="open-doodles-reading" class="illustration dark">
+                <img src="../images/open-doodles-reading-light.svg" alt="open-doodles-reading" class="illustration light">
             </div>
         </div>
         <div class="right-side">
+            <!-- toggle switch dark/light mode -->
+            <div class="toggle-switch flex items-center justify-center mx-auto absolute top-8 mr-8 self-end">
+                <div class="flex justify-end items-center space-x-2 mx-auto relative">
+                    <span class="text-sm font-medium text-primary-black dark:text-primary-white">Light </span>
+                    <div>
+                        <input type="checkbox" name="" id="checkbox" class="hidden" />
+                        <label for="checkbox" class="cursor-pointer">
+                            <div class="w-16 h-8 flex items-center bg-gray-300 rounded-full p2">
+                                <div
+                                    class="switch-ball w-7 h-7 bg-white rounded-full shadow ml-0.5 flex justify-center items-center">
+                                </div>
+                            </div>
+                        </label>
+                    </div>
+                    <span class="text-sm font-semibold text-primary-black dark:text-primary-white">Dark</span>
+                </div>
+            </div>
             <div class="container-form">
                 <img src="../images/Logo Aulabaca.svg" alt="logo" class="logo">
                 <h1>Selamat Datang di Aulabaca!</h1>
                 <div class="auth">
-                    <button class="google">
+                    <button class="google bg-primary-white">
                         <span class="iconify" data-icon="grommet-icons:google" style="color: #888;"
                             data-height="24"></span>
                         <span>Lanjutkan dengan Google</span>
                     </button>
-                    <button class="facebook">
+                    <button class="facebook bg-primary-white">
                         <span class="iconify" data-icon="logos:facebook" style="color: #888;" data-height="24"></span>
                         <span>Lanjutkan dengan Facebook</span>
                     </button>
@@ -60,6 +80,7 @@
         </div>
     </div>
     <script src="https://code.iconify.design/2/2.1.0/iconify.min.js"></script>
+    <script src="../js/main.js" type="text/javascript"></script>
 </body>
 
 </html>

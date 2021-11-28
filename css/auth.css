@@ -1,6 +1,7 @@
 @import "./fonts.css";
 @import "./colors.css";
 @import "./scrollbar.css";
+@import url('https://fonts.googleapis.com/css?family=Material+Icons|Material+Icons+Outlined|Material+Icons+Two+Tone|Material+Icons+Round|Material+Icons+Sharp');
 
 html {
     height: 100%;
@@ -8,14 +9,19 @@ html {
 }
 
 body {
-    background-image: var(--content-background-gradient);
+    background-color: var(--content-background-light);
     height: 100%;
     margin: 0;
     background-repeat: no-repeat;
     background-attachment: fixed;
 }
 
-.container {
+.dark body {
+    background-image: var(--content-background-gradient);
+}
+
+.main {
+    width: 100%;
     height: 100%;
     display: grid;
     grid-template-columns: 600px auto;
@@ -28,6 +34,10 @@ body {
     align-items: center;
     flex-direction: column;
     padding: 32px;
+    background-color: var(--primary-white);
+}
+
+.dark .left-side {
     background-color: var(--background-component-2);
 }
 
@@ -38,14 +48,30 @@ body {
     line-height: 150%;
     letter-spacing: 0.03em;
     font-weight: 400;
-    color: #DBEDF3;
+    color: var(--primary-black);
     align-self: flex-start;
+}
+
+.dark .left-side header h1 {
+    color: #DBEDF3;
 }
 
 .left-side .doodles {
     margin-top: 50px;
     display: flex;
     justify-content: center;
+}
+
+.left-side .doodles .dark {
+    display: none;
+}
+
+.dark .left-side .doodles .light {
+    display: none;
+}
+
+.dark .left-side .doodles .dark {
+    display: block;
 }
 
 .left-side .doodles .blobs {
@@ -65,7 +91,34 @@ body {
     margin-top: 32px;
 }
 
+/* toggle switch dark/light mode */
+#checkbox + label .switch-ball {
+    transition: transform 0.3s linear;
+}
+
+#checkbox:checked + label .switch-ball{
+    background-color: white;
+    -ms-transform: translateX(32px);
+    -webkit-transform: translateX(32px);
+    transform: translateX(32px);
+}
+
+#checkbox + label .switch-ball::before {
+    content: '\e518';
+    font-family: 'Material Icons Round';
+    font-size: 1.25rem;
+    color: var(--background);
+}
+
+#checkbox:checked + label .switch-ball::before {
+    content: '\e51c';
+    font-family: 'Material Icons Round';
+    font-size: 1.25rem;
+    color: var(--background);
+}
+
 .container-form {
+    box-sizing: content-box;
     padding: 24px 84px;
     width: 416px;
     display: flex;
@@ -83,8 +136,12 @@ body {
     font-weight: 600;
     line-height: 118%;
     letter-spacing: 0.0025em;
-    color: var(--primary-white);
+    color: var(--primary-black);
     margin-bottom: 52px;
+}
+
+.dark .container-form h1 {
+    color: var(--primary-white);
 }
 
 .container-form .auth {
@@ -102,10 +159,15 @@ body {
     line-height: 150%;
     letter-spacing: 0.0025em;
     font-weight: 500;
-    color: var(--background-component);
+    color: var(--primary-black);
     display: flex;
     justify-content: center;
     align-items: center;
+    box-shadow: 0px 2px 16px rgba(64, 75, 105, 0.08);
+}
+
+.dark .container-form .auth button {
+    color: var(--background-component);
 }
 
 .auth .iconify {
@@ -118,6 +180,7 @@ button {
 
 button:hover {
     cursor: pointer;
+    box-shadow: none;
 }
 
 input:focus {
@@ -141,7 +204,7 @@ input:focus {
 .separator .line {
     width: 50%;
     height: 2px;
-    background-color: var(--background-component);
+    background-color: var(--subtext);
 }
 
 .separator p {
@@ -149,6 +212,10 @@ input:focus {
     font-size: 0.75rem;
     line-height: 170%;
     letter-spacing: 0.005em;
+    color: var(--primary-black);
+}
+
+.dark .separator p {
     color: var(--primary-white);
 }
 
@@ -162,8 +229,12 @@ input:focus {
     font-size: 0.875rem;
     line-height: 150%;
     letter-spacing: 0.0025em;
-    color: var(--primary-white);
+    color: var(--primary-black);
     margin-bottom: 8px;
+}
+
+.dark .form label {
+    color: var(--primary-white);
 }
 
 .form input {
@@ -176,6 +247,10 @@ input:focus {
     letter-spacing: 0.005em;
     border: none;
     border-radius: 6px;
+    color: var(--primary-black);
+}
+
+.dark .form input {
     color: var(--background-component);
 }
 
@@ -228,6 +303,10 @@ input:focus {
     font-size: 0.875rem;
     line-height: 150%;
     letter-spacing: 0.0025em;
+    color: var(--primary-black);
+}
+
+.dark .daftar {
     color: var(--primary-white);
 }
 
@@ -244,11 +323,20 @@ a:hover {
 }
 
 @media only screen and (max-width: 768px) {
-    .container {
+    .main {
         grid-template-columns: none;
     }
 
     .left-side {
+        display: none;
+    }
+
+    .right-side .toggle-switch {
+        top: 16px;
+        margin-right: 16px;
+    }
+
+    .right-side .toggle-switch span {
         display: none;
     }
 

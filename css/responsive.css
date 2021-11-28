@@ -18,6 +18,7 @@
         min-width: 100%;
         padding: 16px;
         left: 0;
+        top: 84px;
     }
 
     .about-book .add-library span.txt-library {
@@ -33,6 +34,10 @@
     .recent-container .fav,
     .recent-container .more {
         display: none;
+    }
+
+    .recent-container .line-separator {
+        width: 100%;
     }
 
     .cards {
